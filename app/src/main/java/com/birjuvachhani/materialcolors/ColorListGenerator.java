@@ -3,21 +3,15 @@ package com.birjuvachhani.materialcolors;
 import android.content.Context;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-
-import butterknife.BindArray;
 
 /**
  * Created by birju.vachhani on 23/01/18.
  */
 
 public class ColorListGenerator {
-    @BindArray(R.array.color_labels)
     String[] colorLabels;
-    @BindArray(R.array.color_list)
     String[] colorNames;
-    @BindArray(R.array.shade_names)
     String[] shadeNames;
 
     private int[] colorShades = {R.array.red_colors, R.array.pink_colors, R.array.purple_colors, R.array.deepPurple_colors, R.array.indigo_colors,
@@ -34,9 +28,12 @@ public class ColorListGenerator {
 
     public ColorListGenerator(Context context) {
         this.context = context;
+        this.colorLabels=context.getResources().getStringArray(R.array.color_labels);
+        this.colorNames=context.getResources().getStringArray(R.array.color_list);
+        this.shadeNames=context.getResources().getStringArray(R.array.shade_names);
     }
 
-    private List<ColorHolder> getColorList() {
+    protected List<ColorHolder> getColorList() {
         List<ColorHolder> mlist = new ArrayList<>();
         for (int i = 0; i < colorLabels.length; i++) {
             String colorLabel = colorLabels[i];
