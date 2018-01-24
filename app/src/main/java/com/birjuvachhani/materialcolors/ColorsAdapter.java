@@ -5,7 +5,6 @@ import android.databinding.BindingAdapter;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -41,7 +40,7 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorsView
     @Override
     public void onBindViewHolder(ColorsViewHolder holder, int position) {
 
-        ColorHolder colorHolder=mcolorList.get(position);
+        ColorHolder colorHolder = mcolorList.get(position);
 
         holder.bind(colorHolder);
         holder.binding.executePendingBindings();
@@ -59,18 +58,18 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorsView
         public ColorsViewHolder(Context context, ColorsBinding binding) {
             super(binding.getRoot());
             this.context = context;
-            this.binding=binding;
+            this.binding = binding;
         }
 
-        public void bind(ColorHolder colorHolder)
-        {
+        public void bind(ColorHolder colorHolder) {
             binding.setColorholder(colorHolder);
         }
     }
 
-    @BindingAdapter("src")
+    @BindingAdapter("backgroundColor")
     public static void setSrc(LinearLayout layout, String color) {
-        int c = Color.parseColor("2c2c2c");
+
+        int c = Color.parseColor("#2c2c2c");
         if (color != null) {
             try {
                 c = Color.parseColor(color);
@@ -82,9 +81,9 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ColorsView
         }
     }
 
-    @BindingAdapter("txtColor")
+    @BindingAdapter("textColor")
     public static void setTextColor(TextView view, String color) {
-        int c = Color.parseColor("FFFFFF");
+        int c = Color.parseColor("#FFFFFF");
         if (color != null) {
             try {
                 c = Color.parseColor(color);

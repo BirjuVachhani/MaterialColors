@@ -8,7 +8,7 @@ import android.graphics.Color;
  * Created by birju.vachhani on 23/01/18.
  */
 
-public class ColorHolder extends BaseObservable{
+public class ColorHolder extends BaseObservable {
     private String colorLabel; //color name labels in camelCase for using in code. ex. lightBlue
     private String colorName; //original name of color with spaces. ex. light blue
     private String[] shades;
@@ -19,12 +19,12 @@ public class ColorHolder extends BaseObservable{
 
     public ColorHolder(String colorLabel, String colorName, String[] shades, String[] shadeNames, String[] textColors) {
         this.colorLabel = colorLabel;
-        this.colorName=colorName;
+        this.colorName = colorName;
         this.shades = shades;
         this.shadeNames = shadeNames;
         this.textColors = textColors;
-        this.mainColor= shades[5];
-        this.mainTextColor=textColors[5];
+        this.mainColor = shades[5];
+        this.mainTextColor = textColors[5];
     }
 
     public String getColorLabel() {
@@ -47,12 +47,11 @@ public class ColorHolder extends BaseObservable{
         return colorName;
     }
 
-    @Bindable
+
     public String getMainColor() {
         return mainColor;
     }
 
-    @Bindable
     public String getMainTextColor() {
         return mainTextColor;
     }

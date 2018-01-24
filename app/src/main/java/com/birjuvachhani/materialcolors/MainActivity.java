@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding= DataBindingUtil.setContentView(this,R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         ColorListGenerator colorListGenerator = new ColorListGenerator(MainActivity.this);
         List<ColorHolder> mcolorList = colorListGenerator.getColorList();
 
-        ColorsAdapter adapter=new ColorsAdapter(MainActivity.this,mcolorList);
+        ColorsAdapter adapter = new ColorsAdapter(MainActivity.this, mcolorList);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(adapter);
     }

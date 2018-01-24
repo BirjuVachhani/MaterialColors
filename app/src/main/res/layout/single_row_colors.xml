@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:src="@{colorholder.mainColor}">
+        app:backgroundColor="@{colorholder.mainColor}">
 
         <TextView
             android:layout_width="match_parent"
@@ -21,8 +21,8 @@
             android:padding="16dp"
             android:text="@{colorholder.colorName}"
             android:textAlignment="center"
-            app:txtColor="@{colorholder.mainTextColor}"
             android:textSize="16sp"
+            app:textColor="@{colorholder.mainTextColor}"
             tools:text="@tools:sample/first_names" />
 
     </LinearLayout>
