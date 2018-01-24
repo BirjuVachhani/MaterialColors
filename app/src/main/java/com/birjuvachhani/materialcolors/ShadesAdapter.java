@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.birjuvachhani.materialcolors.databinding.ShadesBinding;
 
@@ -37,6 +38,11 @@ public class ShadesAdapter extends RecyclerView.Adapter<ShadesAdapter.ShadesView
     @Override
     public void onBindViewHolder(ShadesViewHolder holder, int position) {
 
+        if(position==9)
+        {
+            RecyclerView.LayoutParams params=(RecyclerView.LayoutParams) holder.mbinding.row.getLayoutParams();
+            params.setMargins(0,0,0,16);
+        }
         ShadeHolder shadeHolder = mshadeList.get(position);
         holder.bind(shadeHolder);
         holder.mbinding.executePendingBindings();

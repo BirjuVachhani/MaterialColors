@@ -11,6 +11,7 @@
     </data>
 
     <RelativeLayout
+        android:id="@+id/row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -32,7 +33,7 @@
             android:layout_alignParentRight="true"
             android:text="@{shadeholder.shadeColor}"
             app:textColor="@{shadeholder.shadeTextColor}"
-            tools:text="@tools:sample/lorem" />
+            tools:text="@tools:sample/last_names" />
 
     </RelativeLayout>
 </layout>
