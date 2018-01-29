@@ -33,6 +33,15 @@ public class ShadesActivity extends AppCompatActivity implements ShadesAdapter.C
         binding.executePendingBindings();
 
         changeStatusBarColor();
+        if(colorHolder.getMainTextColor().equals("Black"))
+        {
+            setTheme(R.style.AppTheme3);
+        }
+
+        binding.toolbar.setBackgroundColor(Color.parseColor(colorHolder.getMainColor()));
+        setSupportActionBar(binding.toolbar);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         List<ShadeHolder> mshadeList = ShadeListGenerator.getShadeList(colorHolder);
 

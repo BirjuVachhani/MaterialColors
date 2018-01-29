@@ -18,7 +18,8 @@
         </activity>
         <activity
             android:name=".ShadesActivity"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppTheme2"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
